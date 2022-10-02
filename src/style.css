@@ -1,0 +1,69 @@
+body {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#parameters_area {
+    max-width: 600px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#info_area {
+    margin-top: 2em;
+    max-width: 400px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#container {
+    max-width: 400px;
+    min-width: 400px;
+    padding: 1em;
+    outline: 2px solid;
+    border-radius: 2px;
+    align-content: center;
+    align-items: center;
+}
+
+h4 {
+    align-self: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#search_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5em;
+}
+
+.filtered {
+    font-size: large;
+    font-weight: bold;
+    color: #09c909;
+}
+
+.hidden {
+    display: none;
+}
+
+.msg {
+    align-self: center;
+    margin-bottom: 0;
+}
+
+list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+    flex-wrap: wrap;
+}

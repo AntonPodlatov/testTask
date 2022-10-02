@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brands Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type="module" src="main.js"></script>
+</head>
+<body>
+<div id="container">
+    <div id="parameters_area">
+        <label for="search_field">Запрос</label>
+        <input id="search_field" type="text">
+        <br>
+        <label for="filter_field"> Мой бренд</label>
+        <input id="filter_field" type="text">
+        <button id="search_button">Поиск</button>
+    </div>
+
+    <div id="info_area">
+        <h4>Рейтинг по запросу: <span id="header"></span></h4>
+        <p class="hidden msg" id="update_msg">Обновится через <span id="counter"></span> с.</p>
+        <p class="hidden msg" id="loading_msg">Загрузка..</p>
+        <ol id="list">
+
+        </ol>
+    </div>
+</div>
+</body>
+</html>
