@@ -1,4 +1,4 @@
-export class List {
+export class InfoArea {
     constructor(list, service, loadingMessage, counter, filterField) {
         this.service = service;
         this.loadingMessage = loadingMessage;
@@ -51,7 +51,7 @@ export class List {
     addNotFoundText() {
         this.notFoundElement = document.createElement("span");
         this.notFoundElement.textContent = "По запросу ничего не найдено.";
-        this.notFoundElement.classList.add("msg")
+    //    this.notFoundElement.classList.add("msg")
         this.list.parentNode.appendChild(this.notFoundElement);
     }
 
@@ -70,7 +70,6 @@ export class List {
                 this.counter.hide();
                 clearInterval(this.intervalId);
                 this.showResults(query).then(() => this.updateWithInterval(query, interval));
-                i = 10;
             } else {
                 i--;
             }

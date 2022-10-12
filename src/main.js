@@ -1,9 +1,9 @@
 import {searchField, button, filterField, headerSpan, LoadingMessage, Counter} from "./modules/DomEntities.js";
 import "./style.css";
-import {List} from "./modules/List.js";
+import {InfoArea} from "./modules/InfoArea.js";
 import {Service} from "./modules/Service.js";
 
-const list = new List(
+const infoArea = new InfoArea(
     document.getElementById("list"),
     new Service(),
     new LoadingMessage(),
@@ -20,17 +20,17 @@ button.addEventListener("click", async () => {
     }
 
     headerSpan.textContent = `"${query}"`;
-    clearInterval(list.intervalId);
+    clearInterval(infoArea.intervalId);
 
-    await list.showResults(query);
-    if (!list.notFoundElement) {
-        await list.updateWithInterval(query, 30);
+    await infoArea.showResults(query);
+    if (!infoArea.notFoundElement) {
+        await infoArea.updateWithInterval(query, 30);
     }
 });
 
 filterField.addEventListener("input", (evt) => {
     const filterValue = evt.target.value.trim().toLowerCase();
-    [].forEach.call(list.list.children, li => {
+    [].forEach.call(infoArea.list.children, li => {
         li.classList = "";
 
         if (filterValue !== "") {
